@@ -1,20 +1,27 @@
 /*===================================================================================================================================================
 
-Application Name: SingleDriveSpaceCheck
+Application Name: SingleDriveSpaceCheck.exe
 Application Type: Console Application
 
 Author:           Ryan Irujo
-Inception:        09.21.2012
+Inception:        12.06.2012
 Last Updated:     12.08.2012
  
 Descrption:       Designed to work with Icinga/Nagios to parse Drive Space Statistics for a Single Drive residing on a Windows Host.
                   
-Changes:          
+Changes:          12.08.2012 - [R. Irujo]
+                  - Added Syntax Examples and NSC.ini Format (for NSClient++) to comments.
 
 
-Syntax:           Single_Drive_Space_Check.exe "<Drive_Letter>" "<Warning_Percent>" "<Critical_Percent>"
+
+Syntax:           Single_Drive_Space_Check.exe <Drive_Letter> <Warning_Percent> <Critical_Percent>
  
 Example:          Single_Drive_Space_Check.exe "C" "10.00" "5.00"
+
+NSC.ini Format:   command[single_disk_space_check]=X:\Path\To\Plugins\SingleDiskSpaceCheck.exe $ARG1$ $ARG2$ $ARG3$
+
+NRPE Syntax:      ./check_nrpe -H <hostname> -c single_disk_space_check -a <Drive_Letter> <Warning_Percent> <Critical_Percent>
+
    
 ===================================================================================================================================================*/
 

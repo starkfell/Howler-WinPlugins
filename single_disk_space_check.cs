@@ -48,7 +48,7 @@ namespace Single_Drive_Check_Console_Application
             if (args.Length == 0)
             {
                 Console.WriteLine("A [Drive Letter], [Warning Percent], and [Critical Percent] Value must be provided!");
-                Environment.Exit(2);
+                Environment.Exit(3);
             }
 
             try

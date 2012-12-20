@@ -108,7 +108,7 @@ namespace service_status_check
             {
                 if (Error is IndexOutOfRangeException)
                 {
-                    Console.WriteLine("The [Warning] and [Critical] Variables must BOTH be present!");
+                    Console.WriteLine("The [Service_Name] Variable must be present!");
                     Environment.Exit(3);
                 }
 
